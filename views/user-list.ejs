@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+    <h1><%= title %></h1>
+    <h3>Node.js, Express & MySQL</h3>
+    <div class="table-data">
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+        <tr>
+          <td><%=data.id %></td>
+          <td><%=data.name %></td>
+          <td><%=data.address %></td>
+          <td><a href="/users/edit/<%=data.id%>">Edit</a></td>
+          <td><a href="/users/delete/<%=data.id%>">Delete</a></td>
+        </tr>
+        <% i++; }) %> <% } else{ %>
+        <tr>
+          <td colspan="7">No Data Found</td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
