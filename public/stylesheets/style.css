@@ -7,6 +7,15 @@ a {
   color: #00B7FF;
 }
 
+.bd-navbar {
+  padding: .75rem 0;
+  background-color: #7952b3 !important;
+}
+
+main > .container {
+  padding: 200px 15px 0 !important;
+}
+
 .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
