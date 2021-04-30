@@ -1,10 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ body {
+  /* padding: 50px; */
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+} 
 
 a {
   color: #00B7FF;
+}
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .bd-navbar {
@@ -13,7 +22,7 @@ a {
 }
 
 main > .container {
-  padding: 200px 15px 0 !important;
+  padding: 60px 15px;
 }
 
 .b-example-divider {
