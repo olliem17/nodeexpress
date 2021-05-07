@@ -14,4 +14,14 @@ router.get('/user-list', function(req, res, next) {
 router.get('/hello', function(req, res, next) {
   res.render('hello', { title: 'Hello', data: 'Oliver'});
 });
+
+router.get('/edit/:userId', function(req, res, next) {
+  var user_id = req.params.userId;
+  var sql='SELECT * FROM users WHERE id=?';
+    db.query(sql, [user_id], function (err, data, fields) {
+    if (err) throw err;
+    res.render('edit', { title: 'Edit User', user: data});
+  });
+});
+
 module.exports = router;

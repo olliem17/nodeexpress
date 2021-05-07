@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">
+                <%= title %>
+            </h1>
+            <p><%=user%></p>
+            <p>id: <%=user[0].id%></p>
+            <p>name: <%=user[0].name%></p>
+            <p>address: <%=user[0].address%></p>
+           
+            <%for (let i = 0; i < user.length; i++) {
+                console.log(user[i]);
+            }
+            %>
+           
+                
+                
+    
+            
+            
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+        </body>
+</html>
