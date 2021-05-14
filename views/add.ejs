@@ -5,35 +5,22 @@
             <h1 class="mt-5">
                 <%= title %>
             </h1>
-            <p><%=user%></p>
-            <p>id: <%=user[0].id%></p>
-            <p>name: <%=user[0].name%></p>
-            <p>email: <%=user[0].email%></p>
-            <p>password: <%=user[0].password%></p>
-            <p>address: <%=user[0].address%></p>
-           
-            <%for (let i = 0; i < user.length; i++) {
-                console.log(user[i]);
-            }
-            %>
-            
-                  <form class="row g-3" action="/users/edit" method="POST">
+                  <form class="row g-3" action="/users/add" method="POST">
                     <div class="col-12">
-                        <input type="hidden" id="id" name="id" value="<%=user[0].id%>">
                         <label for="inputName" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="inputName" name="inputName" value="<%=user[0].name%>" required>
+                        <input type="text" class="form-control" id="inputName" name="inputName" required>
                       </div>
                     <div class="col-md-6">
                       <label for="inputEmail" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" name="inputEmail" value="<%=user[0].email%>" required>
+                      <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
                     </div>
                     <div class="col-md-6">
                       <label for="inputPassword" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="inputPassword" name="inputPassword"value="<%=user[0].password%>" required>
+                      <input type="password" class="form-control" id="inputPassword" name="inputPassword" required>
                     </div>
                     <div class="col-12">
                       <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" name="inputAddress" value="<%=user[0].address%>" required>
+                      <input type="text" class="form-control" id="inputAddress" name="inputAddress" required>
                     </div>
                    
                     <div class="col-12">

@@ -21,9 +21,36 @@ a {
   background-color: #7952b3 !important;
 }
 
+.btn-express, .btn-express:active, .btn-express:visited {
+
+  background-color: #7952b3 !important;
+  border-color: #7952b3 !important;
+
+}
+
+.btn-express:hover {
+  background-color: #6d3abb !important;
+}
+
 main > .container {
   padding: 60px 15px;
 }
+
+.header-search-wrapper {
+  font-size: inherit;
+  font-weight: 400;
+  color: #ffffff;
+  vertical-align: middle;
+  background-color: #e0d1f5;
+  border: 1px solid #ffffff;
+  box-shadow: none;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+
 
 .b-example-divider {
   height: 3rem;
