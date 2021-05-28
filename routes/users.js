@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db=require('../database');
+var dialog = require('dialog');
 
 const { check, validationResult } = require('express-validator');
 
@@ -64,5 +65,17 @@ db.query(sql, [req.body.inputName, req.body.inputAddress, req.body.inputEmail, r
 });
  res.redirect('user-list');  // redirect to user form page after inserting the data
 }); 
+
+
+router.get('/delete/:userId', function(req, res, next) {
+  var user_id = req.params.userId;
+  
+    var sql = 'DELETE FROM users WHERE id = ?';
+    db.query(sql, [user_id], function (err, data, fields) {
+    if (err) throw err;
+      console.log("User has been deleted");
+  });
+  res.send('deleted');
+});
 
 module.exports = router;
