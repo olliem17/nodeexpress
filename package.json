@@ -8,6 +8,7 @@
     "prod": "export NODE_ENV=production&& node ./bin/www"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dialog": "^0.3.1",
